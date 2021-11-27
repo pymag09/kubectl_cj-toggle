@@ -1,0 +1,25 @@
+name: "cj-switch"
+shortDesc: "Used to enable/disable cronjobs"
+longDesc: >
+  The list of the features:
+    * Invert the spec.suspend flag. 'True' turns to 'False' and vice versa
+    * Save current state to and restore state from file
+    * Overwrite spec.suspend flag
+  Possible filters:
+    * All namespaces
+    * Filter by label
+    * Filter by namespace
+  Example:
+    #
+    # Inverts spec.suspend flag for all namespaces or specific one.
+    #
+    kubectl cj-switch [-A|--all-namespaces|-n|--namespace]
+    #
+    # Inverts spec.suspend flag of all cron jobs with the specific label. Could be used in conjunction with namespace options, -A -n etc.
+    #
+    kubectl cj-switch -l key=value
+    #
+    # Sets spec.suspend flag to false/true for all cron jobs within all namespaces.
+    #
+    kubectl cj-switch -A -f ./<FILENAME> -s [false|true]
+command: ./cj-switch.sh
