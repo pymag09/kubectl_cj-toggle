@@ -1,4 +1,4 @@
-# cj-switch
+# cj-toggle
 
 This is the plugin for kubectl which is prepared to be installed with `krew`.  
 First and foremost this tool is for people who like CLI. You can do a lot with k9s, Lens etc. but what could be better than pure CLI.
@@ -9,9 +9,9 @@ If you have significant amount of cronjobs, moreover they are spread across mult
 
 ---
 
-Default behavior of cj-switch is inverting the 'spec.suspend' value of a cron job ('True' turns to 'False' and vice versa). It is also possible to set 'spec.suspend' to True or False explicitly. If you need to preserve previous state and revert it later, please use -f key (for instance when some jobs are suspended, some are not).
+Default behavior of cj-toggle is inverting the 'spec.suspend' value of a cron job ('True' turns to 'False' and vice versa). It is also possible to set 'spec.suspend' to True or False explicitly. If you need to preserve previous state and revert it later, please use -f key (for instance when some jobs are suspended, some are not).
 
-### Usage: cj-switch
+### Usage: cj-toggle
 
 ```
     -A, --all-namespaces: If present, list the requested object(s) across all namespaces.
